@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+tr:hover {
+background-color: #511a3f;
+color:rgb(249, 246, 246)
+}
