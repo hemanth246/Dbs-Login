@@ -17,12 +17,12 @@ const Login = () => {
     redirect(page);
   });
   const handleSubmit = (e) => {
-    const validateEmail = login.find((e) => e.email === formData.email);
-    const validatePassword = validateEmail.password === formData.password;
+    const user = login.find((e) => e.email === formData.email);
+    const validatePassword = user.password === formData.password;
     e.preventDefault();
-    setRole(validateEmail.role);
-    setCurrentUser(validateEmail);
-    return validateEmail && validatePassword
+    setRole(user.role);
+    setCurrentUser(user);
+    return user && validatePassword
       ? (redirect(PAGE.HOME), setPage(PAGE.HOME))
       : setPage(page);
   };
